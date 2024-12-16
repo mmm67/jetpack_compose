@@ -15,8 +15,9 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.grid.GridCells
 import androidx.compose.foundation.lazy.grid.LazyVerticalGrid
 import androidx.compose.foundation.lazy.grid.items
-import androidx.compose.foundation.lazy.grid.rememberLazyGridState
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.CheckCircle
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Surface
 import androidx.compose.runtime.Composable
@@ -28,7 +29,6 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
-import androidx.compose.ui.res.painterResource
 import androidx.compose.ui.unit.dp
 import com.example.multiimageselection.ui.theme.MultiImageSelectionTheme
 
@@ -49,22 +49,37 @@ class MainActivity : ComponentActivity() {
 @Composable
 fun App(modifier: Modifier = Modifier) {
     val images = listOf(
-        Image(imageId = R.drawable.add),
-        Image(imageId = R.drawable.art),
-        Image(imageId = R.drawable.warn),
-        Image(imageId = R.drawable.category),
-        Image(imageId = R.drawable.changepass),
-        Image(imageId = R.drawable.dailyhabit),
-        Image(imageId = R.drawable.deleteaccount),
-        Image(imageId = R.drawable.signup),
-        Image(imageId = R.drawable.notification),
-        Image(imageId = R.drawable.lifestyle),
-        Image(imageId = R.drawable.home),
-        Image(imageId = R.drawable.entertainment),
-        Image(imageId = R.drawable.health),
-        Image(imageId = R.drawable.outdoor),
-        Image(imageId = R.drawable.timer),
-        Image(imageId = R.drawable.other)
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle),
+        Image(imageId = Icons.Filled.CheckCircle)
     )
 
     ImageGrid(modifier, images)
@@ -126,7 +141,7 @@ fun ImageItem(
             )
     ) {
         Image(
-            painter = painterResource(image.imageId),
+            imageVector = image.imageId,
             contentDescription = "image"
         )
     }
